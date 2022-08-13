@@ -17,13 +17,7 @@
 
 
 
-#CHECAR O FINANCIMANETO.
-#renda=float(input('Entre com a reda: '))
-#nome=str(input('Nome limpo sim ou não: '))
-#if renda >= 5000 and nome == "sim":
-    #print('Financiamento aprovado')
-#else:
-    #print('Financiamento não aprovado')
+
 
 # dia=input('Dia =')
 # mes=input('Mês =')
