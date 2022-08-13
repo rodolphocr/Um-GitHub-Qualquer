@@ -29,21 +29,7 @@
 # idade = ano - ano_nascimento
 # print('Você tem {} '.format(idade))
 
-# CHECAGEM DE VELOCIDADE.
-# v=int(input('Entre com a velocidade da pista: '))
-# if v > 110:
-   # print('Acima da velocidade permitida')
-   # print('Reduza a velocidade')
-# elif  v < 60:
-   # print('Aumente a velocidade até 80KM/h')
-#else:
-    # print('Velocidade ok')
 
-#CONVERTER KM/H EM MILHAS
-#km =float(input('Entre com os KM: '))
-#milhas=float(1.609)
-#result = km / milhas
-#print('KM convertido em milhas são: ',result)
 
 #CHECAR O FINANCIMANETO.
 #renda=float(input('Entre com a reda: '))
