@@ -48,3 +48,10 @@ dolar=float(3.27)
 resultado=(d * dolar)
 print('Você pode comprar com', d, 'reais', resultado, 'dolares')
 
+#CALCULO DE IDADE PARA VOTAÇÃO
+idade=int(input('Qual a idade do cidadão? '))
+if idade >=16:
+    print('Você pode votar')
+else:
+    print('Você é muito novo para votar')
+

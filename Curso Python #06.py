@@ -9,11 +9,6 @@
 # n=input('Digite um valor: ')
 # print(type(n))
 
-
-
-
-
-
 # dia=input('Dia =')
 # mes=input('Mês =')
 # ano=input('Ano =')
