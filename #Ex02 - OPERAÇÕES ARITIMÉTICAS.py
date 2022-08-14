@@ -14,7 +14,7 @@ n1 = float(input('Digite um número: '))
 n2 = float(input('Digite um número: '))
 resultado = n1 + n2
 #print('Resultado da soma é : ', resultado)
-print('Resultado da some {}'.format(resultado))
+print('Resultado da soma {}'.format(resultado))
 
 # DESCOBRIR QTOS ANOS A PESSOA TEM.
 ano_nascimento = int(input('Entre com o ano que você nasceu: '))
