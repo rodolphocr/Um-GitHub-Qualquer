@@ -9,11 +9,6 @@
 # n=input('Digite um valor: ')
 # print(type(n))
 
-# DESCOBRIR QTOS ANOS A PESSOA TEM.
-# ano_nascimento = int(input('Entre com o ano que você nasceu: '))
-# ano = (2022)
-# idade = ano - ano_nascimento
-# print('Você tem {} '.format(idade))
 
 
 
