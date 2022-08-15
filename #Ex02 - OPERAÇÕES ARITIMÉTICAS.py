@@ -61,5 +61,16 @@ d=int(input('Qto de dinheiro você tem na carteira em real? '))
 dolar=float(3.27)
 resultado=(d * dolar)
 print('Você pode comprar com {} reais {} dolares'.format(d, resultado))
-#print('Você pode comprar com', d, 'reais', resultado, 'dolares')
+# print('Você pode comprar com', d, 'reais', resultado, 'dolares')
 
+# CALCULANDO MÉDIAS DE NOTAS.
+nota1 = float(input('Digite a nota 1: '))
+nota2 = float(input('Digite a nota 2: '))
+sn = nota1 + nota2
+m = sn / 2
+print('A média entre {} e {} é igual a {}'.format(nota1, nota2, m))
+
+if m >=6:
+    print('Sua média foi {} então você passou.'.format(m))
+else:
+    print('Sua média foi {} então você não passou.'.format(m))
