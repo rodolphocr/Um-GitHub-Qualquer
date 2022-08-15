@@ -60,11 +60,6 @@ print('{} x {} = {}'.format(n, 10, n * 10))
 d=int(input('Qto de dinheiro você tem na carteira em real? '))
 dolar=float(3.27)
 resultado=(d * dolar)
-print('Você pode comprar com', d, 'reais', resultado, 'dolares')
-
-#TABOADA
-n=int(input('Entre com um número para calcular a taboada: '))
-print('---- TABOADA do: ', n,  '------')
-print('{} x {} = {}'.format(n, 1, n*1))
-
+print('Você pode comprar com {} reais {} dolares'.format(d, resultado))
+#print('Você pode comprar com', d, 'reais', resultado, 'dolares')
 
