@@ -14,3 +14,15 @@ dolar=float(3.27)
 resultado=(d  / dolar)
 print('Você pode comprar com {} reais {:.2f} dolares'.format(d, resultado))
 # print('Você pode comprar com', d, 'reais', resultado, 'dolares')
+
+# CALCULAR QTOS LITROS DE TINHA SÃO PARA PINTAR UMA PAREDE
+altura = float(input('Metros em altura: '))
+largura = float(input('Metro em largura: '))
+area = (altura * largura)
+print('A parede tem {}m²'.format(area))
+tinta = (area / 2)
+print('Para pintar essa parede você vai precisar de {}L de tinta!'.format(tinta))
+if tinta > 10:
+    print('Precisamos comprar mais tinha.')
+else:
+    print('Temos tinha suficiente no estoque.')
