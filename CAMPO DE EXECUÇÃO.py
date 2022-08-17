@@ -1,5 +1,5 @@
 # CALCULO DE DESCONTO EM REAIS.
-# VARIÁVEL VALOR É A PORCENTAGEM DO PREÇO
+# VARIÁVEL VALOR É O CALCULO DA PORCENTAGEM DO PREÇO
 preco = float(input('Qual o preço do produto? R$ '))
 porcento = int(input('Valor do desconto em %: '))
 porcentagem = (preco * porcento / 100)
