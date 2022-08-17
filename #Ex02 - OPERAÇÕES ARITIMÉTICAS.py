@@ -56,6 +56,11 @@ print('{} x   {} = {}'.format(n, 8, n * 8))
 print('{} x   {} = {}'.format(n, 9, n * 9))
 print('{} x {} = {}'.format(n, 10, n * 10))
 
+#TABOADA COM FOR COUNT IN.
+tabuada=int(input("Tabuada do numero: "))
+for count in range(10):
+    print("%d x %d = %d" % (tabuada, count+1, tabuada*(count+1)))
+
 #CALCULAR A CONVERSÃO DE REAL EM DOLAR
 d=int(input('Qto de dinheiro você tem na carteira em real? '))
 dolar=float(3.27)
@@ -76,12 +81,14 @@ else:
     print('Sua média foi {} então você não passou.'.format(m))
 
 # CALCULO DE DESCONTO EM REAIS.
+# VARIÁVEL VALOR É A PORCENTAGEM DO PREÇO
 preco = float(input('Qual o preço do produto? R$ '))
-porcentagem = int(input('Valor do desconto em %: '))
-valor = (preco * porcentagem / 100)
-novo = (preco - valor)
+porcento = int(input('Valor do desconto em %: '))
+porcentagem = (preco * porcento / 100)
+novo = (preco - porcentagem)
 print('O produto que está no valor de R${}. \n'
-'Com desconto de {}%, ficará R${}. '.format(preco, porcentagem, novo))
+'Com desconto de {}%, ficará R${}. '.format(preco, porcento, novo))
 
 if novo > 800:
     print('Esse valor com desconto pode ser dividido em 10x no cartão e ficaria no valor de R${}.'.format(novo/10))
+
