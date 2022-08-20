@@ -92,3 +92,14 @@ if media < 7:
     print('Reprovado na matéria de {}, estude mais.'.format(materia))
 elif media >= 7:
     print('Você foi aprovado na máteria de {}.'.format(materia))
+
+#UTILIZAÇÃO DE IMPORTAÇÃO DE MODULOS, GOTO_PY.
+from goto_py import goto
+user = str(input('Entre com o usuário: '))
+senha = str(input('Entre com a senha: '))
+
+if user == senha:
+    print(f' O usuário {user} não pode ser o mesmo que a senha {senha}, entra novamente com os dados.')
+    goto(2)
+else:
+    print('Alteração de senha feita com sucesso.')
