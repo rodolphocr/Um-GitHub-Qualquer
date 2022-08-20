@@ -45,7 +45,7 @@ while automovel == 'carro':
     break
 while automovel == 'moto':
     print('Não temos mais motos no estoque.')
-    exit()
+    break
 preco = float(input('Digite valor do carro: '))
 if preco > 50000:
     porcentagem = (preco * 10  / 100)
