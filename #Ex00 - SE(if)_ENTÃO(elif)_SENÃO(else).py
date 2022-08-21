@@ -55,6 +55,7 @@ if preco > 50000:
 else:
     print("Valores de automoveis menores de R$50.000,00 não tem desconto.")
 
+
 # Faça um Programa que peça dois números e imprima o maior deles.
 n1 = int(input('Entre com o primeiro número: '))
 n2 = int(input('Entre com o segundo número: '))
@@ -93,13 +94,56 @@ if media < 7:
 elif media >= 7:
     print('Você foi aprovado na máteria de {}.'.format(materia))
 
-#UTILIZAÇÃO DE IMPORTAÇÃO DE MODULOS, GOTO_PY.
+# -*- coding: utf-8 -*-
+#Financimaneto de um veículo.
 from goto_py import goto
-user = str(input('Entre com o usuário: '))
-senha = str(input('Entre com a senha: '))
+marca = str(input('Qual o marca de desejada: '))
+veiculo = str(input('Qual o veiculo desejado: '))
+preco = int(input('Qual o valor do veiculo R$: '))
+parcelas = int(input('Qual a quantidade de parcelas do financiamento: '))
+juros = float(10)
 
-if user == senha:
-    print(f' O usuário {user} não pode ser o mesmo que a senha {senha}, entra novamente com os dados.')
-    goto(2)
-else:
-    print('Alteração de senha feita com sucesso.')
+#VALORES ACIMA DE 90K COM PARCELAS ACIMA DE 24X
+if preco >= 90000:
+    if parcelas >= 24:
+        calc = (preco / parcelas)
+        total = calc + (calc * juros / 100)
+        print('Valor do automovel acima de 90k e financimaneto maior ou igual a 24x, contem 10% de juros.')
+        print('O valor da sua parcela com juros de 10%  para o {} {} e de: {:.0f}'.format(marca, veiculo, total))
+        goto(3)
+
+#VALORES ABAIXO DE 80K POREM COM PARCELAS MAIORES OU IGUAIS A 24X
+elif preco <= 80000:
+    if parcelas >= 24:
+        calc1 = (preco / parcelas)
+        total1 = calc1 + (calc1 * juros / 100)
+        print('Valor do automovel abaixo de 80k e financiamento maior ou igual a 24x, contem 10% de juros.')
+        print('O valor da sua parcela com juros de 10% para o {} {} e de: {:.0f}.'.format(marca, veiculo, total1))
+        goto(3)
+
+#PARCELAS ACIMA DE 25X COM VALORES ENTRE 80K E 90K.
+if preco > 80000 and preco < 90000:
+    if parcelas >= 24:
+        calc2 = (preco / parcelas)
+        total2 = calc2 + (calc2 * juros / 100)
+        print('Valores de automoveis entre 80k e 90k e financimaneto maior ou igual a 24x, contem 10% de juros.')
+        print('O valor da sua parcela com juros de 10% para {} {} e de {:.0f}'.format(marca, veiculo, total2))
+        goto(3)
+
+#PARCELAS MENORES QUE 24X COM VALOR ACIMA DE 90K
+if preco >= 90000:
+    if parcelas < 24:
+        calc3 = (preco / parcelas)
+        total3 = calc3
+        print('Valor do automovel que seja maior ou igual a 90k e financiamento menor que 24x, nao contem juros.')
+        print('O valor da sua parcela sem juros para {} {} e de {:.0f}'.format(marca, veiculo, total3))
+        goto(3)
+
+#PARCELAS MENORES QUE 24X COM VALOR ABAIXO DE 80K
+elif preco <= 80000:
+    if parcelas < 24:
+        calc4 = (preco / parcelas)
+        total4= calc4
+        print('Valor do automovel que seja menor ou igual a 80k, e financiamento menor que 24x, nao contem juros.')
+        print('O valor da sua parcela sem juros para {} {} e de {:.0f}'.format(marca, veiculo, total4))
+        goto(3)
