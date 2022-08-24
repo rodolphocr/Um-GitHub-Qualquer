@@ -26,3 +26,12 @@ if tinta > 10:
     print('Precisamos comprar mais tinha.')
 else:
     print('Temos tinha suficiente no estoque.')
+
+#Faça um Programa que pergunte qual o seu salário no mês e divida pra saber quanto ganha por semana, por dia, por hora.
+salario_mensal = float(input('Qual o salário recebio no mês: '))
+semana = (salario_mensal / 4)
+print('Seu salário por semana e de R${:.2f}.'.format(semana))
+dias = (semana / 30)
+print('Seu salário por dia é de R${:.2f}.'.format(dias))
+horas = (dias / 8)
+print('Seu salário por horas trabalhadas é de R${:.2f}'.format(horas))
