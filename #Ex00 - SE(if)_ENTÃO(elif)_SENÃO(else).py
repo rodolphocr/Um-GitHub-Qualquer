@@ -103,7 +103,6 @@ preco = int(input('Qual o valor do veiculo R$: '))
 parcelas = int(input('Qual a quantidade de parcelas do financiamento: '))
 juros = float(10)
 
-#VALORES ACIMA DE 90K COM PARCELAS ACIMA DE 24X
 if preco >= 90000:
     if parcelas >= 24:
         calc = (preco / parcelas)
@@ -112,7 +111,6 @@ if preco >= 90000:
         print('O valor da sua parcela com juros de 10%  para o {} {} e de: {:.0f}'.format(marca, veiculo, total))
         goto(3)
 
-#VALORES ABAIXO DE 80K POREM COM PARCELAS MAIORES OU IGUAIS A 24X
 elif preco <= 80000:
     if parcelas >= 24:
         calc1 = (preco / parcelas)
@@ -121,7 +119,6 @@ elif preco <= 80000:
         print('O valor da sua parcela com juros de 10% para o {} {} e de: {:.0f}.'.format(marca, veiculo, total1))
         goto(3)
 
-#PARCELAS ACIMA DE 25X COM VALORES ENTRE 80K E 90K.
 if preco > 80000 and preco < 90000:
     if parcelas >= 24:
         calc2 = (preco / parcelas)
@@ -130,7 +127,6 @@ if preco > 80000 and preco < 90000:
         print('O valor da sua parcela com juros de 10% para {} {} e de {:.0f}'.format(marca, veiculo, total2))
         goto(3)
 
-#PARCELAS MENORES QUE 24X COM VALOR ACIMA DE 90K
 if preco >= 90000:
     if parcelas < 24:
         calc3 = (preco / parcelas)
@@ -139,7 +135,6 @@ if preco >= 90000:
         print('O valor da sua parcela sem juros para {} {} e de {:.0f}'.format(marca, veiculo, total3))
         goto(3)
 
-#PARCELAS MENORES QUE 24X COM VALOR ABAIXO DE 80K
 elif preco <= 80000:
     if parcelas < 24:
         calc4 = (preco / parcelas)
@@ -147,3 +142,34 @@ elif preco <= 80000:
         print('Valor do automovel que seja menor ou igual a 80k, e financiamento menor que 24x, nao contem juros.')
         print('O valor da sua parcela sem juros para {} {} e de {:.0f}'.format(marca, veiculo, total4))
         goto(3)
+
+#Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:
+n1 = float(input('Entre com a nota do primeiro semestre: '))
+n2 = float(input('Entre com a nota do segundo semestre: '))
+soma_notas = (n1 + n2)
+media = (soma_notas / 2)
+if media >= 9.0 and media <= 10:
+    print('Você tirou {} no primeiro semestre'.format(n1))
+    print('Você tirou {} no segundo semestre'.format(n2))
+    print(f'Sua media é \033[1;32m{media}\033[m')
+    print('Você esta no conceito A, \033[7;1;4;32;40m(APROVADO)\033[m')
+elif media >= 7.5 and media < 9:
+    print('Você tirou {} no primeiro semestre.'.format(n1))
+    print('Você tirou {} no segundo semestre.'.format(n2))
+    print(f'Sua media é \033[1;32m{media}\033[m')
+    print('Você esta no conceito B, \033[7;1;4;32;40m(APROVADO)\033[m')
+elif media >= 6.0 and media < 7.5:
+    print('Você tirou {} no primeiro semestre.'.format(n1))
+    print('Você tirou {} no segundo semestre.'.format(n2))
+    print(f'Sua media é \033[1;32m{media}\033[m')
+    print('Você esta no conceito C, \033[7;1;4;32;40m(APROVADO)\033[m')
+elif media >= 4.0 and media < 6.0:
+    print('Você tirou {} no primeiro semestre.'.format(n1))
+    print('Você tirou {} no segundo semestre.'.format(n2))
+    print(f'Sua media é \033[1;31m {media}\033[m')
+    print('Você esta no conceito D, \033[1;31m(REPROVADO)\033[m')
+else:
+    print('Você tirou {} no primeiro semestre.'.format(n1))
+    print('Você tirou {} no segundo semestre.'.format(n2))
+    print(f'Sua media é \033[1;31m{media}\033[m')
+    print('Você esta no conceito E, \033[1;31m(REPROVADO)\033[m')
